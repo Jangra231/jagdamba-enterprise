@@ -29,7 +29,7 @@ export function PeacockLogo({
       {/* Handcrafted high-fidelity SVG representation of the peacock "JE" logo from the user's image */}
 
       <img
-        src="./public/logo.png"
+        src="./logo.png"
         alt="Jagdamba Enterprises Logo"
         className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 object-contain shrink-0 rounded-2xl"
       />
