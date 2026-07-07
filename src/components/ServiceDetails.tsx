@@ -77,40 +77,8 @@ export default function ServiceDetails({ serviceId, onBack, onEnquire }: Service
             { label: 'Compliance Pass Rate', value: '100%' }
           ]
         };
-      case 'supply-chain':
-        return {
-          audience: 'Multi-location Industries, Chemical Processors, Agri-Exporters',
-          methodology: 'Integrated multimodal tracking, freight consolidation, and warehousing solutions',
-          sla: 'Real-time GPS dispatch reports updated every 4 hours',
-          phases: [
-            { title: 'Route & Cost Optimization Study', desc: 'Determine optimized sea, rail, and road combinations.' },
-            { title: 'Freight Consolidation', desc: 'Combine raw materials batches for significant cost savings.' },
-            { title: 'Secured Warehousing & Hubbing', desc: 'Temperature-controlled and dry industrial inventory nodes.' },
-            { title: 'Last-Mile Fulfillment', desc: 'Just-in-Time delivery to factory doors and plant silos.' }
-          ],
-          stats: [
-            { label: 'Active Transit Corridors', value: '120+' },
-            { label: 'Average Freight Savings', value: '14.5%' },
-            { label: 'On-Time Delivery Rate', value: '99.4%' }
-          ]
-        };
-      case 'industrial-solutions':
-        return {
-          audience: 'Automated Foundries, Clean Solar Arrays, Processing Plants',
-          methodology: 'Precision engineering, certified custom automation kits, and component retrofits',
-          sla: 'Engineering design blueprint validated within 5 business days',
-          phases: [
-            { title: 'On-Site Capacity Diagnostics', desc: 'Complete assessment of existing machine load limits.' },
-            { title: 'System Architecture Design', desc: 'Draft custom blueprints for smart controls & modern PLC panels.' },
-            { title: 'Integration & Trial Runs', desc: 'Install and stress-test retrofitted items under maximum load.' },
-            { title: 'Training & Preventative Protocols', desc: 'Certify internal engineers for smooth day-to-day work.' }
-          ],
-          stats: [
-            { label: 'Plants Automated', value: '38+' },
-            { label: 'Efficiency Increase', value: '26%' },
-            { label: 'Unscheduled Downtime Reduction', value: '40%' }
-          ]
-        };
+      
+      
       case 'consulting':
         return {
           audience: 'Commodity Investors, Enterprise Planners, Corporate Boards',
@@ -172,7 +140,7 @@ export default function ServiceDetails({ serviceId, onBack, onEnquire }: Service
               <span className="text-xs font-bold tracking-[0.3em] text-white uppercase font-mono bg-[#056D34] px-3 py-1 rounded-full">
                 {service.id.toUpperCase()}
               </span>
-              <span className="h-[1px] flex-grow bg-[#0A0A0A]/10" />
+              <span className="h-px grow bg-[#0A0A0A]/10" />
             </div>
 
             <h1 className="font-display font-black text-3xl sm:text-4xl md:text-5xl text-[#0A0A0A] tracking-tight leading-tight mb-4">
@@ -238,14 +206,14 @@ export default function ServiceDetails({ serviceId, onBack, onEnquire }: Service
                 <p className="text-xs sm:text-sm font-semibold text-gray-800 mt-1">{ext.audience}</p>
               </div>
 
-              <div className="h-[1px] bg-gray-100" />
+              <div className="h-px bg-gray-100" />
 
               <div>
                 <span className="text-[10px] text-gray-400 font-bold uppercase tracking-wider font-mono">Core Methodology</span>
                 <p className="text-xs sm:text-sm font-semibold text-gray-800 mt-1">{ext.methodology}</p>
               </div>
 
-              <div className="h-[1px] bg-gray-100" />
+              <div className="h-px bg-gray-100" />
 
               <div>
                 <span className="text-[10px] text-gray-400 font-bold uppercase tracking-wider font-mono">Quality Assurance Protocol (SLA)</span>

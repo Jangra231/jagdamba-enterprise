@@ -24,7 +24,7 @@ export function PeacockLogo({
   return (
     <div
       onClick={onClick}
-      className="flex items-center gap-2 sm:gap-3 cursor-pointer flex-shrink-0"
+      className="flex items-center gap-2 sm:gap-3 cursor-pointer shrink-0"
     >
       {/* Handcrafted high-fidelity SVG representation of the peacock "JE" logo from the user's image */}
 
@@ -94,7 +94,7 @@ export default function Navbar({
                 onClick={() => onNavigate(item.id)}
                 className={`font-display text-sm font-semibold tracking-wider transition-all cursor-pointer relative py-1 ${
                   activeSection === item.id
-                    ? "text-[#056D34] font-bold font-extrabold"
+                    ? "text-[#056D34] font-bold"
                     : "text-[#0A0A0A]/60 hover:text-[#056D34]"
                 }`}
                 id={`nav-link-${item.id}`}
@@ -166,7 +166,7 @@ export default function Navbar({
               </button>
             ))}
 
-            <div className="h-[1px] bg-[#0A0A0A]/10 my-2" />
+            <div className="h-px bg-[#0A0A0A]/10 my-2" />
 
             <div className="flex flex-col gap-3">
               <button

@@ -46,7 +46,7 @@ export default function Footer({ onNavigate }: FooterProps) {
     { label: 'Company Overview', section: 'about' },
     { label: 'Our Mission', section: 'mission' },
     { label: 'Our Vision', section: 'vision' },
-    { label: 'B2B Sourcing Services', section: 'services' },
+    { label: 'B2B Global Services', section: 'services' },
     { label: 'Submit Sourcing RFQ', section: 'contact' }
   ];
 
@@ -54,8 +54,8 @@ export default function Footer({ onNavigate }: FooterProps) {
     <footer className="bg-[#0A0A0A] text-[#FCFCFC]/80 pt-24 pb-12 relative overflow-hidden text-left border-t border-[#0A0A0A]/10" id="corporate-footer-section">
       
       {/* Footer background glows with peacock highlight colors */}
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#056D34]/5 rounded-full filter blur-[150px] pointer-events-none" />
-      <div className="absolute top-0 left-0 w-[300px] h-[300px] bg-[#056D34]/3 rounded-full filter blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-125 h-125 bg-[#056D34]/5 rounded-full filter blur-[150px] pointer-events-none" />
+      <div className="absolute top-0 left-0 w-75 h-75 bg-[#056D34]/3 rounded-full filter blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -68,7 +68,7 @@ export default function Footer({ onNavigate }: FooterProps) {
             </div>
             
             <p className="text-[#FCFCFC]/70 text-xs sm:text-sm leading-relaxed max-w-sm">
-              Jagdamba Enterprises is a leading multi-industry corporate group dedicated to reliable partnerships, green raw material trading, and custom lead generation. Established in 1994, shaping robust global operations.
+              Jagdamba Enterprises is a leading multi-industry corporate group dedicated to reliable partnerships, green raw material trading, and custom lead generation. Established in 2023, shaping robust global operations.
             </p>
 
             {/* Social icons */}

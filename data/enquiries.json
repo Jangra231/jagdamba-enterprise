@@ -75,5 +75,16 @@
     "message": "mbvcxdrtyuiknb",
     "status": "new",
     "createdAt": "2026-07-06T09:59:41.801Z"
+  },
+  {
+    "id": "enq_xqu3sicc8",
+    "name": "Rohit Jangra",
+    "email": "jangra8295829804@gmail.com",
+    "company": "Apex Pvt. Ltd",
+    "phone": "08901062941",
+    "subject": "general",
+    "message": "https://maps.google.com/maps?q=29.1745,75.7843&t=k&z=16&ie=UTF8&iwloc=&output=embed",
+    "status": "new",
+    "createdAt": "2026-07-07T06:59:15.723Z"
   }
 ]

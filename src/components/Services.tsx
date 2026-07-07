@@ -63,7 +63,7 @@ export default function Services({ onViewDetails }: ServicesProps) {
     switch (id) {
       case 'lead-generation':
         return (
-          <div className="relative w-full aspect-[4/3] flex items-center justify-center">
+          <div className="relative w-full aspect-4/3 flex items-center justify-center">
             {/* Magnet graphic */}
             <svg className="w-24 h-24 text-brand-secondary" viewBox="0 0 100 100" fill="none">
               <path d="M 30 25 L 30 55 A 20 20 0 0 0 70 55 L 70 25" stroke="#0A0A0A" strokeWidth="12" strokeLinecap="round" fill="none" />
@@ -80,7 +80,7 @@ export default function Services({ onViewDetails }: ServicesProps) {
         );
       case 'trading':
         return (
-          <div className="relative w-full aspect-[4/3] flex items-center justify-center">
+          <div className="relative w-full aspect-4/3 flex items-center justify-center">
             {/* Globe sphere graphic */}
             <svg className="w-24 h-24 text-brand-secondary" viewBox="0 0 100 100" fill="none">
               <circle cx="50" cy="50" r="36" stroke="#0A0A0A" strokeWidth="2" />
@@ -94,48 +94,11 @@ export default function Services({ onViewDetails }: ServicesProps) {
             </svg>
           </div>
         );
-      case 'supply-chain':
-        return (
-          <div className="relative w-full aspect-[4/3] flex items-center justify-center">
-            {/* Delivery loop graphic */}
-            <svg className="w-24 h-24 text-brand-secondary" viewBox="0 0 100 100" fill="none">
-              {/* Isometric box wireframe */}
-              <path d="M 50 20 L 78 35 L 50 50 L 22 35 Z" fill="rgba(5, 109, 52, 0.1)" stroke="#0A0A0A" strokeWidth="2" />
-              <path d="M 22 35 L 22 65 L 50 80 L 50 50 Z" stroke="#056D34" strokeWidth="2" />
-              <path d="M 78 35 L 78 65 L 50 80 L 50 50 Z" stroke="#0A0A0A" strokeWidth="1.5" />
-              
-              {/* Looping arrows */}
-              <path d="M 15 50 Q 50 90, 85 50" stroke="#0A0A0A" strokeWidth="1.5" strokeDasharray="3 3" />
-            </svg>
-          </div>
-        );
-      case 'industrial-solutions':
-        return (
-          <div className="relative w-full aspect-[4/3] flex items-center justify-center">
-            {/* Revolving gears graphic */}
-            <svg className="w-24 h-24 text-brand-secondary" viewBox="0 0 100 100" fill="none">
-              {/* Gear 1 */}
-              <g>
-                <circle cx="42" cy="42" r="16" stroke="#0A0A0A" strokeWidth="4" />
-                <path d="M 42 22 L 42 26" stroke="#0A0A0A" strokeWidth="4" strokeLinecap="round" />
-                <path d="M 42 58 L 42 62" stroke="#0A0A0A" strokeWidth="4" strokeLinecap="round" />
-                <path d="M 22 42 L 26 42" stroke="#0A0A0A" strokeWidth="4" strokeLinecap="round" />
-                <path d="M 58 42 L 62 42" stroke="#0A0A0A" strokeWidth="4" strokeLinecap="round" />
-              </g>
-              {/* Gear 2 */}
-              <g>
-                <circle cx="68" cy="68" r="12" stroke="#056D34" strokeWidth="3" />
-                <path d="M 68 53 L 68 56" stroke="#056D34" strokeWidth="3" strokeLinecap="round" />
-                <path d="M 68 80 L 68 83" stroke="#056D34" strokeWidth="3" strokeLinecap="round" />
-                <path d="M 53 68 L 56 68" stroke="#056D34" strokeWidth="3" strokeLinecap="round" />
-                <path d="M 80 68 L 83 68" stroke="#056D34" strokeWidth="3" strokeLinecap="round" />
-              </g>
-            </svg>
-          </div>
-        );
+      
+      
       case 'consulting':
         return (
-          <div className="relative w-full aspect-[4/3] flex items-center justify-center">
+          <div className="relative w-full aspect-4/3 flex items-center justify-center">
             {/* Bubble advisors graphic */}
             <svg className="w-24 h-24 text-brand-secondary" viewBox="0 0 100 100" fill="none">
               <rect x="20" y="25" width="50" height="34" rx="8" fill="rgba(10,10,10,0.05)" stroke="#0A0A0A" strokeWidth="2" />
@@ -170,14 +133,14 @@ export default function Services({ onViewDetails }: ServicesProps) {
         {/* Section Header */}
         <div className="text-left mb-16 max-w-3xl">
           <div className="flex items-center gap-2 mb-3">
-            <span className="h-[2px] w-8 bg-[#056D34]" />
+            <span className="h-0.5 w-8 bg-[#056D34]" />
             <span className="text-xs font-bold tracking-[0.3em] text-[#0A0A0A]/70 uppercase font-mono">
               OUR SERVICES
             </span>
           </div>
           <h2 className="font-display font-black text-3xl sm:text-4xl md:text-5xl text-[#0A0A0A] tracking-tight leading-tight">
             SOLUTIONS THAT <span className="text-white bg-[#056D34] px-2 rounded-lg">CREATE VALUE.</span> <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0A0A0A] to-[#606060]">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-[#0A0A0A] to-[#606060]">
               IMPACT THAT LASTS.
             </span>
           </h2>

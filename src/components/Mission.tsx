@@ -110,7 +110,7 @@ export default function Mission({ onBack, onNavigateContact }: MissionProps) {
               <span className="text-gray-600 font-semibold flex items-center gap-2">
                 <Users size={16} className="text-[#0A0A0A]" /> Client Retention Rate
               </span>
-              <span className="font-extrabold font-mono text-[#0A0A0A]">98.2% Since 1994</span>
+              <span className="font-extrabold font-mono text-[#0A0A0A]">98.2% Since 2023</span>
             </div>
           </div>
         </div>
