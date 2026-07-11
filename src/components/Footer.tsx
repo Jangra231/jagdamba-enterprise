@@ -3,86 +3,109 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import { 
-  Phone, 
-  MessageCircle, 
-  Linkedin, 
-  Twitter, 
-  Instagram, 
-  Facebook, 
-  Send, 
-  ArrowUp, 
-  Mail, 
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
+import {
+  Phone,
+  MessageCircle,
+  Linkedin,
+  Twitter,
+  Instagram,
+  Facebook,
+  Send,
+  ArrowUp,
+  Mail,
   CheckCircle2,
-  ChevronRight
-} from 'lucide-react';
-import { PeacockLogo } from './Navbar';
+  ChevronRight,
+} from "lucide-react";
+import { PeacockLogo } from "./Navbar";
 
 interface FooterProps {
   onNavigate: (sectionId: string) => void;
 }
 
 export default function Footer({ onNavigate }: FooterProps) {
-  const [emailInput, setEmailInput] = useState('');
+  const [emailInput, setEmailInput] = useState("");
   const [isSubscribed, setIsSubscribed] = useState(false);
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!emailInput.trim() || !emailInput.includes('@')) return;
+    if (!emailInput.trim() || !emailInput.includes("@")) return;
     setIsSubscribed(true);
-    setEmailInput('');
+    setEmailInput("");
     setTimeout(() => {
       setIsSubscribed(false);
     }, 5000);
   };
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const footerLinks = [
-    { label: 'Company Overview', section: 'about' },
-    { label: 'Our Mission', section: 'mission' },
-    { label: 'Our Vision', section: 'vision' },
-    { label: 'B2B Global Services', section: 'services' },
-    { label: 'Submit Sourcing RFQ', section: 'contact' }
+    { label: "Company Overview", section: "about" },
+    { label: "Our Mission", section: "mission" },
+    { label: "Our Vision", section: "vision" },
+    { label: "B2B Global Services", section: "services" },
+    { label: "Submit Sourcing RFQ", section: "contact" },
   ];
 
   return (
-    <footer className="bg-[#0A0A0A] text-[#FCFCFC]/80 pt-24 pb-12 relative overflow-hidden text-left border-t border-[#0A0A0A]/10" id="corporate-footer-section">
-      
+    <footer
+      className="bg-[#0A0A0A] text-[#FCFCFC]/80 pt-24 pb-12 relative overflow-hidden text-left border-t border-[#0A0A0A]/10"
+      id="corporate-footer-section"
+    >
       {/* Footer background glows with peacock highlight colors */}
       <div className="absolute bottom-0 right-0 w-125 h-125 bg-[#056D34]/5 rounded-full filter blur-[150px] pointer-events-none" />
       <div className="absolute top-0 left-0 w-75 h-75 bg-[#056D34]/3 rounded-full filter blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16 border-b border-white/10 pb-16">
-          
           {/* Brand Col */}
-          <div className="md:col-span-5 flex flex-col gap-6">
-            <div className="bg-white/5 p-3 rounded-2xl w-fit">
-              <PeacockLogo theme="dark" onClick={() => onNavigate('home')} />
+          <div className="md:col-span-5 flex flex-col gap-6 ">
+            <div className="bg-[#cccdcc00] p-3 rounded-2xl w-fit">
+              <PeacockLogo theme="dark" onClick={() => onNavigate("home")} />
             </div>
-            
+
             <p className="text-[#FCFCFC]/70 text-xs sm:text-sm leading-relaxed max-w-sm">
-              Jagdamba Enterprises is a leading multi-industry corporate group dedicated to reliable partnerships, green raw material trading, and custom lead generation. Established in 2023, shaping robust global operations.
+              Jagdamba Enterprises is a leading multi-industry corporate group
+              dedicated to reliable partnerships, green raw material trading,
+              and custom lead generation. Established in 2023, shaping robust
+              global operations.
             </p>
 
             {/* Social icons */}
             <div className="flex gap-4 items-center">
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center text-[#056D34] hover:bg-[#056D34] hover:text-white hover:scale-105 transition-all">
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center text-[#056D34] hover:bg-[#056D34] hover:text-white hover:scale-105 transition-all"
+              >
                 <Linkedin size={16} />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center text-[#056D34] hover:bg-[#056D34] hover:text-white hover:scale-105 transition-all">
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center text-[#056D34] hover:bg-[#056D34] hover:text-white hover:scale-105 transition-all"
+              >
                 <Twitter size={16} />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center text-[#056D34] hover:bg-[#056D34] hover:text-white hover:scale-105 transition-all">
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center text-[#056D34] hover:bg-[#056D34] hover:text-white hover:scale-105 transition-all"
+              >
                 <Instagram size={16} />
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center text-[#056D34] hover:bg-[#056D34] hover:text-white hover:scale-105 transition-all">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center text-[#056D34] hover:bg-[#056D34] hover:text-white hover:scale-105 transition-all"
+              >
                 <Facebook size={16} />
               </a>
             </div>
@@ -117,7 +140,8 @@ export default function Footer({ onNavigate }: FooterProps) {
                 Sourcing Dispatch
               </h4>
               <p className="text-[#FCFCFC]/60 text-xs leading-relaxed">
-                Subscribe to receive our periodic macro commodity forecasts, ESG summaries, and direct raw materials sourcing bulletins.
+                Subscribe to receive our periodic macro commodity forecasts, ESG
+                summaries, and direct raw materials sourcing bulletins.
               </p>
             </div>
 
@@ -152,33 +176,33 @@ export default function Footer({ onNavigate }: FooterProps) {
               )}
             </AnimatePresence>
           </div>
-
         </div>
 
         {/* Bottom copyright segment */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-gray-400 font-mono font-bold border-t border-white/5 pt-8">
-          <p>© {new Date().getFullYear()} Jagdamba Enterprises. All Rights Reserved.</p>
+          <p>
+            © {new Date().getFullYear()} Jagdamba Enterprises. All Rights
+            Reserved.
+          </p>
           <div className="flex flex-wrap gap-6 justify-center sm:justify-end">
-            <button 
-              onClick={() => onNavigate('privacy')} 
+            <button
+              onClick={() => onNavigate("privacy")}
               className="hover:text-[#056D34] cursor-pointer transition-colors bg-transparent border-none p-0 text-gray-400 font-mono font-bold text-xs"
             >
               PRIVACY POLICY
             </button>
-            <button 
-              onClick={() => onNavigate('terms')} 
+            <button
+              onClick={() => onNavigate("terms")}
               className="hover:text-[#056D34] cursor-pointer transition-colors bg-transparent border-none p-0 text-gray-400 font-mono font-bold text-xs"
             >
               TERMS OF COMPLIANCE
             </button>
           </div>
         </div>
-
       </div>
 
       {/* FLOATING ACTION PANELS (Scroll to Top Only) */}
       <div className="fixed bottom-6 right-6 z-40 flex flex-col gap-3 items-center">
-        
         {/* Scroll To Top button */}
         <button
           onClick={scrollToTop}
@@ -188,9 +212,7 @@ export default function Footer({ onNavigate }: FooterProps) {
         >
           <ArrowUp size={18} strokeWidth={2.5} />
         </button>
-
       </div>
-
     </footer>
   );
 }

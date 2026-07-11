@@ -22,30 +22,65 @@ export function PeacockLogo({
   onClick?: () => void;
 }) {
   return (
-    <div
-      onClick={onClick}
-      className="flex items-center gap-2 sm:gap-3 cursor-pointer shrink-0"
+    <div 
+      onClick={onClick} 
+      className="flex flex-col cursor-pointer shrink-0 group select-none relative w-fit"
+      id="brand-logo-container"
     >
-      {/* Handcrafted high-fidelity SVG representation of the peacock "JE" logo from the user's image */}
-
-      <img
-        src="./logo.png"
-        alt="Jagdamba Enterprises Logo"
-        className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 object-contain shrink-0 rounded-2xl"
-      />
-      <span
-        className={`text-lg sm:text-xl md:text-2xl font-black tracking-tight uppercase font-display whitespace-nowrap ${
-          theme === "light" ? "text-[#0A0A0A]" : "text-[#FCFCFC]"
-        }`}
-      >
-        Jagdamba
-        <span
-          className={theme === "light" ? "text-[#056D34]" : "text-[#FCFCFC]/70"}
+      {/* Top row: Logo and JAENLY of equal height */}
+      <div className="flex items-center gap-2.5 sm:gap-3 h-9.5 sm:h-11.5 md:h-13">
+        {/* Animated Logo Container without border/background frame */}
+        <motion.div 
+          className="h-full aspect-square flex items-center justify-center shrink-0"
+          whileHover={{ 
+            scale: 1.08,
+          }}
+          transition={{ type: 'spring', stiffness: 300, damping: 15 }}
         >
-          {" "}
-          Enterprises
+          <img 
+            src="./logo.png" 
+            alt="Jaenly Logo" 
+            className="h-full w-full bg-white rounded-2xl object-contain"
+            referrerPolicy="no-referrer"
+          />
+        </motion.div>
+
+        {/* JAENLY Text of equal height in brand green */}
+        <span className={`h-full flex items-center text-[30px] sm:text-[36px] md:text-[42px] font-black tracking-tight uppercase font-display leading-none whitespace-nowrap transition-colors duration-300 ${
+          theme === 'light' 
+            ? 'text-[#056D34] group-hover:text-[#0A0A0A]' 
+            : 'text-[#056D34] group-hover:text-emerald-400'
+        }`}>
+          JAENLY
         </span>
-      </span>
+      </div>
+
+      {/* Bottom row: JAGDAMBA ENTERPRISE stretching from start of logo to end of jaenly */}
+      <div className={`w-full flex justify-between text-[8px] sm:text-[10px] md:text-[11px] font-black tracking-normal font-mono uppercase mt-1 transition-colors duration-300 ${
+        theme === 'light' 
+          ? 'text-[#262626] group-hover:text-[#056D34]' 
+          : 'text-[#FCFCFC]/80 group-hover:text-emerald-400'
+      }`}>
+        <span>J</span>
+        <span>A</span>
+        <span>G</span>
+        <span>D</span>
+        <span>A</span>
+        <span>M</span>
+        <span>B</span>
+        <span>A</span>
+        <span className="w-1.5 sm:w-2"></span>
+        <span>E</span>
+        <span>N</span>
+        <span>T</span>
+        <span>E</span>
+        <span>R</span>
+        <span>P</span>
+        <span>R</span>
+        <span>I</span>
+        <span>S</span>
+        <span>E</span>
+      </div>
     </div>
   );
 }
