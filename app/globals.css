@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-brand-primary: #056D34;
+  --color-brand-secondary: #0A0A0A;
+  --color-brand-gold: #056D34;
+  --color-brand-cream: #FCFCFC;
+  --color-brand-dark: #0A0A0A;
+  --color-brand-bg: #FCFCFC;
+  --color-brand-muted: #7E7E7D;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FCFCFC;
+}
+::-webkit-scrollbar-thumb {
+  background: #0A0A0A;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #056D34;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: #FCFCFC;
+  color: #0A0A0A;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #FCFCFC;
+  color: #0A0A0A;
+}
+
+.glass-panel {
+  background: rgba(252, 252, 252, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(126, 126, 125, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(10, 10, 10, 0.02);
+}
+
+.glass-panel-dark {
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.glass-navbar {
+  background: rgba(252, 252, 252, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(126, 126, 125, 0.15);
+}
+
+.glow-blob {
+  filter: blur(120px);
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.map-canvas {
+  background-image: radial-gradient(rgba(126, 126, 125, 0.12) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.active-nav-indicator {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #056D34;
+  border-radius: 9999px;
+}
+
+input, select, textarea {
+  background-color: rgba(252, 252, 252, 0.8) !important;
+  color: #0A0A0A !important;
+  border: 1px solid rgba(126, 126, 125, 0.3) !important;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: #056D34 !important;
+  background-color: #ffffff !important;
+  box-ring: 2px rgba(5, 109, 52, 0.5);
+  outline: none;
+}
